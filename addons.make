@@ -1,4 +1,4 @@
 ofxImGui
-ofxKsmrImGuiUtil
+#ofxKsmrImGuiUtil
 ofxOsc
 ofxTurboJpeg
