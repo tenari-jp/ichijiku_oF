@@ -3,16 +3,23 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
+	frame.setup(720, 1280);
+	frame.setFromDir("jpg_half", 4);
+
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-
+	if (ofGetFrameNum() % 60 == 0)
+	{
+		cout << ofGetFrameRate() << endl;
+	}
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-
+	frame.draw(fmodf(ofGetFrameNum() / 60.0, 1.0));
+	ofDrawBitmapStringHighlight(ofToString(ofGetFrameRate()), 30, 30);
 }
 
 //--------------------------------------------------------------
