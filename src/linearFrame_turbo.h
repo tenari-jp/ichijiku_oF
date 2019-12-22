@@ -22,13 +22,14 @@ public:
 	{
 		ofDirectory dir;
 		dir.listDir(path);
+		dir.sort();
 		files.clear();
 		files = dir.getFiles();
 
 		for (int i = 0; i < files.size(); i += stride)
 		{
-			cout << "load :" << i / stride << endl;
 			string path = files[i].getAbsolutePath();
+			cout << "load :" << path << endl;
 			buf.push_back(ofBufferFromFile(path, true));
 		}
 

@@ -10,15 +10,16 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-	if (ofGetFrameNum() % 60 == 0)
+	if (ofGetFrameNum() % 2 == 0)
 	{
-		cout << ofGetFrameRate() << endl;
+	//	cout << "targ" << fmodf(ofGetFrameNum() / 60.0f, 1.0f) << endl;
 	}
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-	frame.draw(fmodf(ofGetFrameNum() / 60.0, 1.0));
+
+	frame.draw(fmodf(ofGetFrameNum() / 60.0f, 1.0f));
 	ofDrawBitmapStringHighlight(ofToString(ofGetFrameRate()), 30, 30);
 }
 
