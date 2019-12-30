@@ -2,10 +2,13 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-
+	ofSetFullscreen(true);
 	frame.setup(720, 1280);
 	frame.setFromDir("jpg_half", 4);
-
+	cout << "GLES information =====" << endl;
+	GLint r;
+	glGetIntegerv(GL_MAX_RENDERBUFFER_SIZE, &r);
+	cout << "render :" << r << endl;
 }
 
 //--------------------------------------------------------------
