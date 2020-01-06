@@ -2,6 +2,7 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+	cout << "setup" << endl;
 	ofSetFullscreen(true);
 	frame.setup(720, 1280);
 	frame.setFromDir("jpg_half", 4);
@@ -9,20 +10,22 @@ void ofApp::setup(){
 	GLint r;
 	glGetIntegerv(GL_MAX_RENDERBUFFER_SIZE, &r);
 	cout << "render :" << r << endl;
+
+	an.setup();
+	valueSmooth = ofMap(an.update(), 0, 1023, 0, 1, true);
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-	if (ofGetFrameNum() % 2 == 0)
-	{
-	//	cout << "targ" << fmodf(ofGetFrameNum() / 60.0f, 1.0f) << endl;
-	}
+	cout << an.update() << endl;
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+	float val = ofMap(an.update(), 0, 1023, 0, 1, true);
+	valueSmooth += (val - valueSmooth) / 5.0;
 
-	frame.draw(fmodf(ofGetFrameNum() / 60.0f, 1.0f));
+	frame.draw(valueSmooth);
 	ofDrawBitmapStringHighlight(ofToString(ofGetFrameRate()), 30, 30);
 }
 

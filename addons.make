@@ -2,4 +2,4 @@ ofxImGui
 #ofxKsmrImGuiUtil
 ofxOsc
 ofxTurboJpeg
-ofxWiringPi
+#ofxWiringPi

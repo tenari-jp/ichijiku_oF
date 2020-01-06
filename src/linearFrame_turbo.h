@@ -20,6 +20,7 @@ public:
 
 	void setFromDir(string path, int stride)
 	{
+		cout << "file sorting..." << endl;
 		ofDirectory dir;
 		dir.listDir(path);
 		dir.sort();

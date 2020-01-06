@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "linearFrame_turbo.h"
+#include "analogReader.h"
 
 class ofApp : public ofBaseApp{
 
@@ -23,4 +24,7 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		
 		linearFrame_turbo frame;
+		analogReader an;
+
+		float valueSmooth = 0;
 };

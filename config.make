@@ -76,7 +76,7 @@
 # add a runtime path to search for those shared libraries, since they aren't 
 # incorporated directly into the final executable application binary.
 ################################################################################
-# PROJECT_LDFLAGS=-Wl,-rpath=./libs
+# PROJECT_LDFLAGS=-Wl,-rpath=./libs,
 
 ################################################################################
 # PROJECT DEFINES
@@ -139,4 +139,4 @@
 ################################################################################
 # PROJECT_CXX = 
 # PROJECT_CC = 
-PROJECT_LDFLAGS += -latomic
+PROJECT_LDFLAGS += -latomic -lwiringPi
