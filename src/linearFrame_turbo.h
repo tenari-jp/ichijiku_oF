@@ -41,7 +41,7 @@ public:
 	{
 		if (files.size() == 0) return;
 		int index = ofMap(pos, 0.0, 1.0, 0, numFile - 1, true);
-		
+		cout << index << endl;
 		turbo.load(img, buf[index]);
 		img.draw(0, 0, ofGetWidth(), ofGetHeight());
 	}

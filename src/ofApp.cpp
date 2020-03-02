@@ -5,7 +5,7 @@ void ofApp::setup(){
 	cout << "setup" << endl;
 	ofSetFullscreen(true);
 	frame.setup(720, 1280);
-	frame.setFromDir("jpg_half", 4);
+	frame.setFromDir("cone", 1);
 	cout << "GLES information =====" << endl;
 	GLint r;
 	glGetIntegerv(GL_MAX_RENDERBUFFER_SIZE, &r);
@@ -17,7 +17,7 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-	cout << an.update() << endl;
+//	cout << an.update() << endl;
 }
 
 //--------------------------------------------------------------
