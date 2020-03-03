@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "linearFrame_turbo.h"
 #include "analogReader.h"
+#include "ofxOsc.h"
 
 class ofApp : public ofBaseApp{
 
@@ -23,6 +24,7 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
+		ofxOscReceiver recv;
 		linearFrame_turbo frame;
 		analogReader an;
 
